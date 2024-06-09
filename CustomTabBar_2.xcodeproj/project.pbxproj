@@ -70,6 +70,7 @@
 		3956544C2C149BB900EE99F5 /* CustomTabBar_2 */ = {
 			isa = PBXGroup;
 			children = (
+				395654752C15EE4A00EE99F5 /* Recources */,
 				395654682C15611B00EE99F5 /* App */,
 				395654662C15610000EE99F5 /* DefaultTabBar */,
 				395654652C1560F500EE99F5 /* CustomTabBar */,
@@ -134,6 +135,13 @@
 				395654712C15646D00EE99F5 /* Constants.swift */,
 			);
 			path = ReusableFunctions;
+			sourceTree = "<group>";
+		};
+		395654752C15EE4A00EE99F5 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

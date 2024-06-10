@@ -1,13 +1,13 @@
 //
-//  TabBarHelperFunctions.swift
+//  TabProvider.swift
 //  CustomTabBar_2
 //
-//  Created by Ravshan Winter on 09/06/24.
+//  Created by Ravshan Winter on 10/06/24.
 //
 
 import UIKit
 
-struct Constants {
+struct TabProvider {
     enum Tab: String {
         case home = "Home"
         case order = "Order"

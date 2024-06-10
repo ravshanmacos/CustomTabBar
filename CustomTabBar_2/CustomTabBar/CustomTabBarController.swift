@@ -15,9 +15,8 @@ class CustomTabBarController: UITabBarController, TabBarViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+       
         tabBarView.delegate = self
-        tabBarView.backgroundColor = .red
         setupSubviews()
     }
     
@@ -27,19 +26,18 @@ class CustomTabBarController: UITabBarController, TabBarViewDelegate {
         let settingsVC = makeViewController(for: .settings)
         let imagesVC = makeViewController(for: .images)
         let deleteVC = makeViewController(for: .delete)
-        setViewControllers([homeVC, orderVC, settingsVC, imagesVC, deleteVC], animated: true)
         
+        setViewControllers([homeVC, orderVC, settingsVC, imagesVC, deleteVC], animated: true)
         tabBar.addSubviews(tabBarView)
         
         NSLayoutConstraint.activate([
             tabBarView.topAnchor.constraint(equalTo: tabBar.topAnchor),
-            tabBarView.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor),
             tabBarView.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
             tabBarView.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor)
         ])
     }
     
-    func makeViewController(for tab: Constants.Tab) -> UIViewController {
+    func makeViewController(for tab: TabProvider.Tab) -> UIViewController {
         let vc = UIViewController()
         vc.view.backgroundColor = tab.backgroundColor
         return vc

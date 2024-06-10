@@ -46,14 +46,14 @@ class DefaultTabBarController: UITabBarController {
 
 private extension UITabBarController {
     
-    func makeViewController(for tab: Constants.Tab) -> UIViewController {
+    func makeViewController(for tab: TabProvider.Tab) -> UIViewController {
         let vc = UIViewController()
         vc.tabBarItem = makeTabbarItem(for: tab)
         vc.view.backgroundColor = tab.backgroundColor
         return vc
     }
     
-    func makeTabbarItem(for tab: Constants.Tab) -> UITabBarItem {
+    func makeTabbarItem(for tab: TabProvider.Tab) -> UITabBarItem {
         let tabBarItem = UITabBarItem()
         tabBarItem.title = tab.rawValue
         tabBarItem.image = tab.image

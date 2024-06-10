@@ -11,19 +11,17 @@ class TabBarItemView: UIView {
     //MARK: Properties
     private let imageView: UIImageView = {
        let imageView = UIImageView()
-        //imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     private let imageWrapper: UIView = {
        let view = UIView()
-        //view.backgroundColor = .yellow
         return view
     }()
     
     private let titleLabel: UILabel = {
        let label = UILabel()
-        //label.backgroundColor = .cyan
         label.font = .systemFont(ofSize: 14, weight: .medium)
         return label
     }()
@@ -42,6 +40,7 @@ class TabBarItemView: UIView {
             UIView.animate(withDuration: 0.2) {[weak self] in
                 guard let self else { return }
                 titleLabel.text = isActive ? tabBarItem.title : ""
+                imageView.tintColor = isActive ? .black : .systemBlue
                 layoutIfNeeded()
             }
         }
@@ -78,10 +77,12 @@ class TabBarItemView: UIView {
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            imageWrapper.widthAnchor.constraint(equalToConstant: 50),
+            //imageWrapper.widthAnchor.constraint(equalToConstant: 50),
             
             imageView.centerYAnchor.constraint(equalTo: imageWrapper.centerYAnchor),
-            imageView.centerXAnchor.constraint(equalTo: imageWrapper.centerXAnchor),
+            //imageView.centerXAnchor.constraint(equalTo: imageWrapper.centerXAnchor),
+            imageView.leadingAnchor.constraint(equalTo: imageWrapper.leadingAnchor, constant: 5),
+            imageView.trailingAnchor.constraint(equalTo: imageWrapper.trailingAnchor, constant: -5),
             
             imageView.widthAnchor.constraint(equalToConstant: 30),
             imageView.heightAnchor.constraint(equalToConstant: 30)
@@ -99,14 +100,3 @@ class TabBarItemView: UIView {
     }
 }
 
-extension UIStackView {
-    func hasSubview<Element: UIView>(view: Element) -> Bool {
-        var isExist = false
-        subviews.forEach { subview in
-            if subview is Element {
-                isExist = true
-            }
-        }
-        return isExist
-    }
-}

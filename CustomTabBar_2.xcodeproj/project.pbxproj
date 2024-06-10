@@ -20,6 +20,7 @@
 		3956546F2C1561EF00EE99F5 /* UIView_UIStackView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956546E2C1561EF00EE99F5 /* UIView_UIStackView+ext.swift */; };
 		395654722C15646D00EE99F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395654712C15646D00EE99F5 /* Constants.swift */; };
 		395654742C15683500EE99F5 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395654732C15683500EE99F5 /* TabBarItem.swift */; };
+		395654772C16BCBF00EE99F5 /* TabProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395654762C16BCBF00EE99F5 /* TabProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3956546E2C1561EF00EE99F5 /* UIView_UIStackView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView_UIStackView+ext.swift"; sourceTree = "<group>"; };
 		395654712C15646D00EE99F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		395654732C15683500EE99F5 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		395654762C16BCBF00EE99F5 /* TabProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 				395654682C15611B00EE99F5 /* App */,
 				395654662C15610000EE99F5 /* DefaultTabBar */,
 				395654652C1560F500EE99F5 /* CustomTabBar */,
-				395654702C15640F00EE99F5 /* ReusableFunctions */,
+				395654702C15640F00EE99F5 /* Resources */,
 				395654672C15610D00EE99F5 /* Extensions */,
 				395654692C15613500EE99F5 /* Layout */,
 				3956545B2C149BBB00EE99F5 /* Info.plist */,
@@ -129,12 +131,13 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		395654702C15640F00EE99F5 /* ReusableFunctions */ = {
+		395654702C15640F00EE99F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				395654712C15646D00EE99F5 /* Constants.swift */,
+				395654762C16BCBF00EE99F5 /* TabProvider.swift */,
 			);
-			path = ReusableFunctions;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		395654752C15EE4A00EE99F5 /* Recources */ = {
@@ -219,6 +222,7 @@
 				3956546D2C15616600EE99F5 /* TabBarItemView.swift in Sources */,
 				395654742C15683500EE99F5 /* TabBarItem.swift in Sources */,
 				3956546F2C1561EF00EE99F5 /* UIView_UIStackView+ext.swift in Sources */,
+				395654772C16BCBF00EE99F5 /* TabProvider.swift in Sources */,
 				395654522C149BB900EE99F5 /* DefaultTabBarController.swift in Sources */,
 				395654642C1560DA00EE99F5 /* CustomTabBarController.swift in Sources */,
 				3956544E2C149BB900EE99F5 /* AppDelegate.swift in Sources */,

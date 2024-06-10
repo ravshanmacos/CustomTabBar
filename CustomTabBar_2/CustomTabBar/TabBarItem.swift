@@ -15,11 +15,11 @@ struct TabBarItem {
     let bckColor: UIColor?
     
     static func getMockTabBarItems() -> [TabBarItem] {
-        let homeTab = Constants.Tab.home
-        let orderTab = Constants.Tab.order
-        let settingsTab = Constants.Tab.settings
-        let imagesTab = Constants.Tab.images
-        let deleteTab = Constants.Tab.delete
+        let homeTab = TabProvider.Tab.home
+        let orderTab = TabProvider.Tab.order
+        let settingsTab = TabProvider.Tab.settings
+        let imagesTab = TabProvider.Tab.images
+        let deleteTab = TabProvider.Tab.delete
         return [
             .init(index: 0, title: homeTab.rawValue,
                   image: homeTab.image, bckColor: homeTab.backgroundColor),

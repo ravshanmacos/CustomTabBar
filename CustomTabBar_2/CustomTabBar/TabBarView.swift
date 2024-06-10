@@ -49,9 +49,12 @@ class TabBarView: UIView {
         
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 50),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            contentView.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     
